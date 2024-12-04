@@ -1,7 +1,4 @@
 CÓDIGO MYSQL
-drop database if exists obra;
-CREATE DATABASE obra;
-USE obra;
 
 drop database if exists obra;
 CREATE DATABASE obra;
@@ -64,49 +61,50 @@ INSERT INTO materiais VALUES
 
 ##JOINS JOINS JOINS JOINS JOINS JOINS JOINS JOINS JOINS JOINS JOINS JOINS JOINS JOINS JOINS JOINS
 
-#SELECT funcionarios.id_funcionario, funcionarios.nome, projetos.nome AS nome_do_projeto
-#FROM funcionarios
-#INNER JOIN projetos ON funcionarios.id_projeto = projetos.id_projeto WHERE projetos.nome = 'predio_1';
+SELECT funcionarios.id_funcionario, funcionarios.nome, projetos.nome AS nome_do_projeto
+FROM funcionarios
+INNER JOIN projetos ON funcionarios.id_projeto = projetos.id_projeto WHERE projetos.nome = 'predio_1';
 
-#SELECT funcionarios.nome, projetos.id_projeto
-#FROM funcionarios
-#LEFT JOIN projetos ON funcionarios.id_projeto=projetos.id_projeto;
+SELECT funcionarios.nome, projetos.id_projeto
+FROM funcionarios
+LEFT JOIN projetos ON funcionarios.id_projeto=projetos.id_projeto;
 
-#SELECT funcionarios.nome, projetos.id_projeto
-#FROM funcionarios
-#RIGHT JOIN projetos ON funcionarios.id_projeto=projetos.id_projeto;
+SELECT funcionarios.nome, projetos.id_projeto
+FROM funcionarios
+RIGHT JOIN projetos ON funcionarios.id_projeto=projetos.id_projeto;
 
-#SELECT funcionarios.nome, projetos.id_projeto
-#FROM funcionarios
-#FULL JOIN projetos ON funcionarios.id_projeto=projetos.id_projeto;
+SELECT funcionarios.nome, projetos.id_projeto
+FROM funcionarios
+FULL JOIN projetos ON funcionarios.id_projeto=projetos.id_projeto;
 
 ##CONSULTAS CONSULTAS CONSULTAS CONSULTAS CONSULTAS CONSULTAS CONSULTAS CONSULTAS CONSULTAS CONSULTAS
 
 ##consulte o nome dos funcionarios que estão trabalhando nas obras com prazo de 4 meses, usando INNER JOIN.
 
-#SELECT funcionarios.nome AS NOME_DO_FUNCIONARIO, projetos.prazo AS PRAZO_DOS_PROJETOS
-#FROM funcionarios
-#INNER JOIN projetos ON funcionarios.id_funcionario = projetos.id_projeto
-#WHERE prazo LIKE "%4 Meses%";
+SELECT funcionarios.nome AS NOME_DO_FUNCIONARIO, projetos.prazo AS PRAZO_DOS_PROJETOS
+FROM funcionarios
+INNER JOIN projetos ON funcionarios.id_funcionario = projetos.id_projeto
+WHERE prazo LIKE "%4 Meses%";
 
 ##CONSULTE O NOME E ID DOS FUNCIONARIOS QUE ESTÃO TRABALHANDO NOS PROJETOS COM STATUS NULO E O NOME DOS PROJETOS, USANDO RIGHT JOIN:
 
-#SELECT funcionarios.id_funcionario AS ID, funcionarios.nome AS NOME_FUNCIONARIO, projetos.nome AS NOME_DO_PROJETO, projetos.status_obra AS STATUS_DO_PROJETO, projetos.nome
-#FROM funcionarios
-#RIGHT JOIN projetos ON funcionarios.id_projeto = projetos.id_projeto
-#WHERE projetos.status_obra is null;
+SELECT funcionarios.id_funcionario AS ID, funcionarios.nome AS NOME_FUNCIONARIO, projetos.nome AS NOME_DO_PROJETO, projetos.status_obra AS STATUS_DO_PROJETO, projetos.nome
+FROM funcionarios
+RIGHT JOIN projetos ON funcionarios.id_projeto = projetos.id_projeto
+WHERE projetos.status_obra is null;
 
 ##Consulte todos os materiais, seus respectivos projetos, a quantidade total de cada material, incluindo projetos sem materiais.
-#SELECT materiais.nome AS NOME_DO_MATERIAL, projetos.nome AS PROJETO_REFERENTE, materiais.quantidade AS QUANTIDADE
-#FROM materiais
-#LEFT JOIN funcionarios ON materiais.id_funcionario = funcionarios.id_funcionario
-#LEFT JOIN projetos ON funcionarios.id_projeto = projetos.id_projeto;
+  
+SELECT materiais.nome AS NOME_DO_MATERIAL, projetos.nome AS PROJETO_REFERENTE, materiais.quantidade AS QUANTIDADE
+FROM materiais
+LEFT JOIN funcionarios ON materiais.id_funcionario = funcionarios.id_funcionario
+LEFT JOIN projetos ON funcionarios.id_projeto = projetos.id_projeto;
 
 ##Consulte nome dos funcionários, suas profissões e o nome dos projetos que estão trabalhando (apenas com status "Planejamento"), 
 ##e que o prazo do projeto seja maior que 4 meses, usando FULL JOIN.
 
-#SELECT funcionarios.nome AS NOME_DO_FUNCIONÁRIO, funcionarios.profissao AS PEOFISSÃO, projetos.nome AS PROJETOS_DO_FUNCIONARIO
-#FROM funcionarios 
-#FULL JOIN projetos ON funcionarios.id_projeto = projetos.id_projeto
-#WHERE projetos.status_obra = "%Planejamento%" AND projetos.prazo > "4 Meses";
+SELECT funcionarios.nome AS NOME_DO_FUNCIONÁRIO, funcionarios.profissao AS PEOFISSÃO, projetos.nome AS PROJETOS_DO_FUNCIONARIO
+FROM funcionarios 
+FULL JOIN projetos ON funcionarios.id_projeto = projetos.id_projeto
+WHERE projetos.status_obra = "%Planejamento%" AND projetos.prazo > "4 Meses";
 
