@@ -1,5 +1,3 @@
-CÓDIGO MYSQL
-
 drop database if exists obra;
 CREATE DATABASE obra;
 USE obra;
