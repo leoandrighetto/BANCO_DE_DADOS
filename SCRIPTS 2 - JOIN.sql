@@ -75,7 +75,7 @@ RIGHT JOIN projetos ON funcionarios.id_projeto=projetos.id_projeto;
 
 SELECT funcionarios.nome, projetos.id_projeto
 FROM funcionarios
-FULL JOIN projetos ON funcionarios.id_projeto=projetos.id_projeto;
+JOIN projetos ON funcionarios.id_projeto=projetos.id_projeto;
 
 ##CONSULTAS CONSULTAS CONSULTAS CONSULTAS CONSULTAS CONSULTAS CONSULTAS CONSULTAS CONSULTAS CONSULTAS
 
@@ -105,6 +105,6 @@ LEFT JOIN projetos ON funcionarios.id_projeto = projetos.id_projeto;
 
 SELECT funcionarios.nome AS NOME_DO_FUNCIONÁRIO, funcionarios.profissao AS PEOFISSÃO, projetos.nome AS PROJETOS_DO_FUNCIONARIO
 FROM funcionarios 
-FULL JOIN projetos ON funcionarios.id_projeto = projetos.id_projeto
+JOIN projetos ON funcionarios.id_projeto = projetos.id_projeto
 WHERE projetos.status_obra = "%Planejamento%" AND projetos.prazo > "4 Meses";
 
