@@ -83,12 +83,12 @@ JOIN projetos ON funcionarios.id_projeto=projetos.id_projeto;
 
 SELECT funcionarios.nome AS NOME_DO_FUNCIONARIO, projetos.prazo AS PRAZO_DOS_PROJETOS
 FROM funcionarios
-INNER JOIN projetos ON funcionarios.id_funcionario = projetos.id_projeto
+INNER JOIN projetos ON funcionarios.id_projeto = projetos.id_projeto
 WHERE prazo LIKE "%4 Meses%";
 
 ##CONSULTE O NOME E ID DOS FUNCIONARIOS QUE ESTÃO TRABALHANDO NOS PROJETOS COM STATUS NULO E O NOME DOS PROJETOS, USANDO RIGHT JOIN:
 
-SELECT funcionarios.id_funcionario AS ID, funcionarios.nome AS NOME_FUNCIONARIO, projetos.nome AS NOME_DO_PROJETO, projetos.status_obra AS STATUS_DO_PROJETO, projetos.nome
+SELECT funcionarios.id_funcionario AS ID, funcionarios.nome AS NOME_FUNCIONARIO, projetos.nome AS NOME_DO_PROJETO, projetos.status_obra AS STATUS_DO_PROJETO
 FROM funcionarios
 RIGHT JOIN projetos ON funcionarios.id_projeto = projetos.id_projeto
 WHERE projetos.status_obra is null;
