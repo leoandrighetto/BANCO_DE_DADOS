@@ -96,15 +96,18 @@
             <mxPoint x="-30" y="-36" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ctMOSWHJZRxfP_i-9TRb-33" value="" style="endArrow=none;html=1;rounded=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;exitX=-0.008;exitY=0.357;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="ctMOSWHJZRxfP_i-9TRb-4" target="ctMOSWHJZRxfP_i-9TRb-16">
+        <mxCell id="ctMOSWHJZRxfP_i-9TRb-33" value="" style="endArrow=none;html=1;rounded=0;entryX=1.004;entryY=0;entryDx=0;entryDy=0;exitX=0.001;exitY=0.122;exitDx=0;exitDy=0;exitPerimeter=0;entryPerimeter=0;" edge="1" parent="1" source="ctMOSWHJZRxfP_i-9TRb-4" target="ctMOSWHJZRxfP_i-9TRb-16">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="140" y="400" as="sourcePoint" />
+            <mxPoint x="610" y="480" as="sourcePoint" />
             <mxPoint x="300" y="400" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="580" y="480" />
+            </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="ctMOSWHJZRxfP_i-9TRb-44" value="CONTÉM" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rotation=0;" vertex="1" connectable="0" parent="ctMOSWHJZRxfP_i-9TRb-33">
           <mxGeometry x="-0.2582" y="-4" relative="1" as="geometry">
-            <mxPoint x="-16" y="-13" as="offset" />
+            <mxPoint x="-6" y="-13" as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
